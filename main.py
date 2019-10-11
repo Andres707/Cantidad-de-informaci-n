@@ -1,3 +1,4 @@
+__author__ = 'Andres Julian'
 import math
 import easygui as eg
 import tkinter as tk
@@ -31,7 +32,6 @@ def graficar(carater, i, h):
 class APP:
 
     def __init__(self):
-        # Creat Window
         self.r = Tk()
         self.r.geometry('400x500')
         self.r.configure(bg='beige')
@@ -42,9 +42,9 @@ class APP:
         arch = ttk.Frame(tab_control)
         tab_control.add(txt, text='Texto')
         tab_control.add(arch, text='Archivo')
-        tab_control.pack(expand=1, fill='both')
         # ARchivo
         # text box
+        # Creat Window
         self.cajC = ScrolledText(arch, width=7, height=15)
         self.cajC.place(x=10, y=130)
         self.cajPD = ScrolledText(arch, width=8, height=15)
@@ -79,6 +79,7 @@ class APP:
         # TExto
         # text box
         self.cajatexto = ScrolledText(txt, width=35, height=5)
+        tab_control.pack(expand=1, fill='both')
         self.cajatexto.place(x=10, y=15)
         self.cajaC = ScrolledText(txt, width=7, height=15)
         self.cajaC.place(x=10, y=130)
@@ -205,6 +206,7 @@ class APP:
 
 def main():
     mi_app = APP()
+    print("Creado por", __author__)
     return 0
 
 
